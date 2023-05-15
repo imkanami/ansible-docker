@@ -1,0 +1,11 @@
+---
+- name: Install and configure Docker and Docker Compose
+  hosts: all
+  become: yes
+  gather_facts: yes
+
+  roles:
+    - name: docker
+      vars:
+        docker_users:
+          - kate
